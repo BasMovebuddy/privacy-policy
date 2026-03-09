@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MoveBuddy – Privacy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #3DC8C0 0%, #2AA89E 50%, #1E8A82 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      font-family: 'Ubuntu', sans-serif;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blob1 {
+      position: fixed;
+      bottom: -80px;
+      left: -60px;
+      width: 320px;
+      height: 320px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50% 40% 60% 30% / 40% 60% 30% 70%;
+    }
+    .blob2 {
+      position: fixed;
+      top: -40px;
+      right: -40px;
+      width: 220px;
+      height: 220px;
+      background: rgba(255,255,255,0.07);
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+
+    .card {
+      background: white;
+      border-radius: 24px;
+      max-width: 500px;
+      width: 100%;
+      padding: 40px;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.15);
+      position: relative;
+      z-index: 2;
+      animation: slideUp 0.5s cubic-bezier(0.16,1,0.3,1) forwards;
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .logo {
+      font-family: 'Baloo 2', cursive;
+      font-weight: 800;
+      font-size: 20px;
+      color: #3DC8C0;
+      margin-bottom: 24px;
+    }
+    .logo span { color: #7B6CF6; }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f0fdf9;
+      border: 1.5px solid #3DC8C0;
+      border-radius: 100px;
+      padding: 4px 12px;
+      font-size: 12px;
+      color: #1E8A82;
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      background: #3DC8C0;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    h2 {
+      font-family: 'Baloo 2', cursive;
+      font-weight: 700;
+      font-size: 22px;
+      color: #1a3a38;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #6b8c8a;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, #e8f8f7, #d0f0ee, #e8f8f7);
+      margin: 20px 0;
+    }
+
+    .item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .item-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .teal  { background: linear-gradient(135deg, #3DC8C0, #2AA89E); }
+    .purple{ background: linear-gradient(135deg, #9B8FF4, #7B6CF6); }
+    .red   { background: linear-gradient(135deg, #f87171, #ef4444); }
+    .blue  { background: linear-gradient(135deg, #60a5fa, #3b82f6); }
+
+    .item-text strong {
+      display: block;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: #1a3a38;
+      margin-bottom: 2px;
+    }
+
+    .item-text span {
+      font-size: 13px;
+      color: #6b8c8a;
+      line-height: 1.5;
+    }
+
+    .consent-box {
+      background: #f0fdf9;
+      border: 1.5px solid #c8ede9;
+      border-radius: 12px;
+      padding: 14px 16px;
+      font-size: 12.5px;
+      color: #4a7a76;
+      line-height: 1.6;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .consent-box a {
+      color: #7B6CF6;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="blob1"></div>
+  <div class="blob2"></div>
+
+  <div class="card">
+    <div class="logo">:movebuddy<span>.</span></div>
+
+    <div class="badge">
+      <div class="badge-dot"></div>
+      Jouw privacy, onze verantwoordelijkheid
+    </div>
+
+    <h2>Voordat we beginnen 👋</h2>
+    <p class="subtitle">
+      Fijn dat je de AI-keuzehulp van MoveBuddy gebruikt! Even kort uitleggen hoe we omgaan met jouw gegevens.
+    </p>
+
+    <div class="divider"></div>
+
+    <div class="item">
+      <div class="item-icon teal">🔒</div>
+      <div class="item-text">
+        <strong>Veilig verwerkt</strong>
+        <span>Jouw antwoorden worden verwerkt via beveiligde systemen en API's.</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-icon purple">🤖</div>
+      <div class="item-text">
+        <strong>Alleen voor jouw aanbeveling</strong>
+        <span>De gegevens worden uitsluitend gebruikt om jouw persoonlijke top 3 leaseauto's samen te stellen.</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-icon red">🚫</div>
+      <div class="item-text">
+        <strong>Niet extern gedeeld</strong>
+        <span>Jouw gegevens blijven binnen MoveBuddy en worden nooit gedeeld met derden.</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-icon blue">💾</div>
+      <div class="item-text">
+        <strong>Opgeslagen in ons CRM</strong>
+        <span>Jouw top 3 wordt veilig bewaard zodat jouw Buddy er altijd bij kan.</span>
+      </div>
+    </div>
+
+    <div class="consent-box">
+      Door verder te gaan ga je automatisch akkoord met dit gebruik van jouw gegevens. Meer weten? Lees onze volledige <a href="https://movebuddy.eu/privacy-policy/">privacyverklaring</a>.
+    </div>
+
+  </div>
+
+</body>
+</html>
